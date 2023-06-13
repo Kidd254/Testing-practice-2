@@ -117,3 +117,24 @@ describe("Calculator - multiply method", () => {
     expect(calculator.multiply(5, 0)).toBe(0);
   });
 });
+
+function capitalize(string){
+  let allLowerCase = string.toLowerCase();
+  let string1 = allLowerCase.slice(0, 1);
+  string1 = string1.toUpperCase();
+  
+  let string2 = allLowerCase.slice(1, string.length);
+
+  return string1.concat(string2);
+}
+
+test('captalizes the first letter in a string', () =>{
+  //arrange
+  let string = 'eunice';
+
+  //act
+  let result = capitalize(string);
+
+  //assert
+  expect(result).toBe('Eunice')
+})
